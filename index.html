@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Todoshka</title>
 </head>
 
@@ -15,7 +15,7 @@
       <img src="img/todo.svg" width="50px">
       <form class="form" id="form">
         <label>
-          <input class="form__input" type="text" id="taskInput" placeholder="Wake up" required>
+          <input class="form__input" type="text" id="taskInput" placeholder="Create new task" required>
           <span class="visually-hidden">Create new task</span>
         </label>
         <button class="btn form__btn" type="submit">Add a new task</button>
@@ -27,24 +27,24 @@
       <section class="tasks">
         <div class="tasks__head">
           <h2 class="title">To Do</h2>
-          <div class="task-quantity"></div>
+          <div class="task-quantity" id="taskQuantity">0</div>
         </div>
         <ul class="tasks__list" id="tasksList">
           <li class="no-task" id="noTask">No tasks yet</li>
-          <li class="tasks__item">
+          <!-- <li class="tasks__item">
             <span>Some task</span>
             <div class="tasks__btns">
               <button class="btn tasks__done-btn" type="button">Done</button>
               <button class="btn" type="button">Remove</button>
             </div>
-          </li>
+          </li> -->
         </ul>
       </section>
 
       <section class="tasks">
         <div class="tasks__head">
           <h2 class="title">Done</h2>
-          <div class="task-quantity"></div>
+          <div class="task-quantity" id="doneQuantity">0</div>
         </div>
         <ul class="tasks__list" id="doneList">
           <li class="no-task" id="noDone">No completed tasks</li>
@@ -56,7 +56,7 @@
       </section>
     </main>
   </div>
-  <script src="/js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
