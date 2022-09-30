@@ -57,7 +57,7 @@ function removeTask(e) {
 
       getQuantity()
       checkNoTasks()
-    }, 200)
+    }, 300)
   };
 };
 
@@ -96,10 +96,6 @@ function  getQuantity() {
   taskQuantity.innerHTML = tasksList.children.length - 1
   const doneQuantity = document.querySelector('#doneQuantity')
   doneQuantity.innerHTML = doneList.children.length - 1
-  // const taskQuantity = document.querySelector('#taskQuantity');
-  // taskQuantity.innerHTML = tasks.length
-  // const doneQuantity = document.querySelector('#doneQuantity')
-  // doneQuantity.innerHTML = doneList.children.length - 1
 };
 
 function saveToLocalStorage() {
@@ -107,9 +103,10 @@ function saveToLocalStorage() {
 }
 
 function renderTask(task) {
+  const text = task.text.charAt(0).toUpperCase() + task.text.slice(1);
   const taskHtml = `
   <li class="tasks__item" id="${task.id}">
-    <span>${task.text}</span>
+    <span>${text}</span>
     <div class="tasks__btns">
       <button class="btn tasks__done-btn" type="button">Done</button>
       <button class="btn" type="button">Remove</button>
@@ -118,3 +115,4 @@ function renderTask(task) {
 `;
 tasksList.insertAdjacentHTML('beforeend', taskHtml);
 }
+

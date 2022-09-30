@@ -10,9 +10,10 @@
 </head>
 
 <body class="body">
+  <h1 class="visually-hidden">To do list</h1>
   <div class="wrapper">
     <header class="header">
-      <img src="img/todo.svg" width="50px">
+      <img src="img/todo.svg" width="50" alt="to do list and pen">
       <form class="form" id="form">
         <label>
           <input class="form__input" type="text" id="taskInput" placeholder="Create new task" required>
@@ -31,13 +32,6 @@
         </div>
         <ul class="tasks__list" id="tasksList">
           <li class="no-task" id="noTask">No tasks yet</li>
-          <!-- <li class="tasks__item">
-            <span>Some task</span>
-            <div class="tasks__btns">
-              <button class="btn tasks__done-btn" type="button">Done</button>
-              <button class="btn" type="button">Remove</button>
-            </div>
-          </li> -->
         </ul>
       </section>
 
@@ -48,15 +42,10 @@
         </div>
         <ul class="tasks__list" id="doneList">
           <li class="no-task" id="noDone">No completed tasks</li>
-          <!-- <li class="tasks__item">
-            <span></span>
-            <button class="btn " type="button">Remove</button>
-          </li> -->
         </ul>
       </section>
     </main>
   </div>
   <script src="js/script.js"></script>
 </body>
-
 </html>
